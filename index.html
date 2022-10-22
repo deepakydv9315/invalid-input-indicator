@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invalid Input</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #eee;
+        }
+
+        input{
+            border: 2px solid black;
+            padding: 8px 5px;
+            font-size: 18px;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus{
+            border: 2px solid blue;
+        }
+
+        input:invalid{
+            border: 2px solid red;
+            animation: shake 0.25s linear;
+        }
+
+        @keyframes shake{
+            25%{
+                transform: translateX(5px);
+            }
+            50%{
+                transform: translateX(-5px);
+            }
+            75%{
+                transform: translateX(5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <input 
+    type="text"
+    pattern="[a-z]*"
+    placeholder="Enter your name"
+    >
+</body>
+</html>
